@@ -1,13 +1,10 @@
 import os
-os.environ['CUDA_HOME'] = '/home'
-print(os.environ['CUDA_HOME'])
 
 import mindspore.numpy.dtypes
 import mindspore
 import mindnlp
 from mindspore import context
-context.set_context(device_target="GPU")
-print(context.get_context('device_target'))
+
 from mindnlp.transformers import AutoformerConfig, AutoformerForPrediction
 import pandas as pd
 import matplotlib.dates as mdates
